@@ -46,8 +46,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <NavLink to="/" className="flex items-center text-2xl font-bold">
-            <span className="text-gradient">Cognitive Datablocks
-          </span>
+            <span className="text-gradient">Cognitive Datablocks</span>
           </NavLink>
           
           {/* Desktop Navigation */}
