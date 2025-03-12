@@ -48,7 +48,7 @@ const Services = () => {
         },
         {
           title: '3D Visualization',
-          description: 'Realistic 3D models and visualizations that bring concepts and products to life before they're built.',
+          description: 'Realistic 3D models and visualizations that bring concepts and products to life before they are built.',
           icon: Layers,
         },
       ]

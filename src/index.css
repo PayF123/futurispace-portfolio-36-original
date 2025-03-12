@@ -5,7 +5,7 @@
 
 @layer base {
   :root {
-    --background: 240 33% 98%;
+    --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -14,16 +14,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222 47% 33%;
+    --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 270 50% 47%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 270 67% 94%;
+    --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -33,16 +33,7 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
-    --radius: 0.75rem;
-
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --radius: 0.5rem;
   }
 
   .dark {
@@ -74,85 +65,86 @@
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
   }
+
+  /* Custom TechInnovate colors */
+  :root {
+    --techblue-50: 217 100% 97%;
+    --techblue-100: 217 100% 91%;
+    --techblue-200: 217 100% 80%;
+    --techblue-300: 217 100% 69%;
+    --techblue-400: 217 100% 58%;
+    --techblue-500: 217 100% 47%;
+    --techblue-600: 217 100% 37%;
+    --techblue-700: 217 100% 27%;
+    --techblue-800: 217 100% 17%;
+    --techblue-900: 217 100% 7%;
+    
+    --techpurple-50: 270 100% 97%;
+    --techpurple-100: 270 100% 91%;
+    --techpurple-200: 270 100% 80%;
+    --techpurple-300: 270 100% 69%;
+    --techpurple-400: 270 100% 58%;
+    --techpurple-500: 270 100% 47%;
+    --techpurple-600: 270 100% 37%;
+    --techpurple-700: 270 100% 27%;
+    --techpurple-800: 270 100% 17%;
+    --techpurple-900: 270 100% 7%;
+  }
 }
 
 @layer base {
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground;
-    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
-
-  h1, h2, h3, h4, h5, h6 {
-    @apply tracking-tight font-semibold;
-  }
-
-  h1 {
-    @apply text-4xl sm:text-5xl md:text-6xl;
-  }
-
-  h2 {
-    @apply text-3xl sm:text-4xl;
-  }
-
-  h3 {
-    @apply text-2xl sm:text-3xl;
-  }
-
-  p {
-    @apply leading-7;
-  }
-}
-
-@layer utilities {
+  
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-techblue-600 to-techpurple-600 animate-text-shimmer bg-[length:200%_auto];
+    @apply bg-gradient-to-r from-techblue-600 to-techpurple-600 bg-clip-text text-transparent;
   }
   
   .glass {
-    @apply bg-white/30 backdrop-blur-md border border-white/20 shadow-xl;
-  }
-  
-  .glass-dark {
-    @apply bg-black/30 backdrop-blur-md border border-white/10 shadow-xl;
-  }
-  
-  .transition-all-200 {
-    @apply transition-all duration-200;
+    @apply bg-white/70 backdrop-blur-md;
   }
   
   .subtle-shift {
-    @apply hover:-translate-y-1 transition-transform duration-300;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .subtle-shift:hover {
+    transform: translateY(-5px);
   }
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-/* Page transition animations */
-.page-enter {
-  opacity: 0;
-  transform: translateY(10px);
+.animate-gradient {
+  animation: gradient 15s ease infinite;
 }
 
-.page-enter-active {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 300ms, transform 300ms;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.page-exit {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.page-exit-active {
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 300ms, transform 300ms;
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out;
 }

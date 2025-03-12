@@ -68,7 +68,7 @@ const Insights = () => {
     },
     {
       title: 'Creating Immersive Virtual Training Environments',
-      excerpt: 'Learn about the benefits of virtual reality training and how it's being implemented across various industries.',
+      excerpt: 'Learn about the benefits of virtual reality training and how it is being implemented across various industries.',
       image: 'https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
       category: 'AR/VR',
       date: 'January 7, 2023',
