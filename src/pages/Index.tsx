@@ -1,6 +1,7 @@
+
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Code, Database, Rocket, Palette, Shield } from 'lucide-react';
+import { ArrowRight, Code, Database, Rocket, Palette } from 'lucide-react';
 import AnimatedGradient from '@/components/ui/AnimatedGradient';
 import ServiceCard from '@/components/ui/ServiceCard';
 import ProjectCard from '@/components/ui/ProjectCard';
@@ -37,10 +38,6 @@ const Index = () => {
     title: 'UI/UX Design',
     description: 'Elevate your digital presence with intuitive, beautiful interfaces that enhance user experience and drive engagement.',
     icon: Palette
-  }, {
-    title: 'Cybersecurity Solutions',
-    description: 'Protect your digital assets with our comprehensive cybersecurity solutions that safeguard against modern threats.',
-    icon: Shield
   }];
 
   const projects = [{
@@ -133,7 +130,7 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => <ServiceCard key={index} title={service.title} description={service.description} icon={service.icon} />)}
           </div>
         </div>
