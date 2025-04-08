@@ -1,12 +1,13 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Code, Database, Rocket, Palette } from 'lucide-react';
+import { ArrowRight, Code, Database, Rocket, Palette, Shield } from 'lucide-react';
 import AnimatedGradient from '@/components/ui/AnimatedGradient';
 import ServiceCard from '@/components/ui/ServiceCard';
 import ProjectCard from '@/components/ui/ProjectCard';
 import TestimonialCard from '@/components/ui/TestimonialCard';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+
 const Index = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -19,6 +20,7 @@ const Index = () => {
     window.addEventListener('scroll', parallaxEffect);
     return () => window.removeEventListener('scroll', parallaxEffect);
   }, []);
+
   const services = [{
     title: 'AI Development',
     description: 'Harness the power of artificial intelligence with our custom AI solutions designed to automate processes and provide valuable insights.',
@@ -35,7 +37,12 @@ const Index = () => {
     title: 'UI/UX Design',
     description: 'Elevate your digital presence with intuitive, beautiful interfaces that enhance user experience and drive engagement.',
     icon: Palette
+  }, {
+    title: 'Cybersecurity Solutions',
+    description: 'Protect your digital assets with our comprehensive cybersecurity solutions that safeguard against modern threats.',
+    icon: Shield
   }];
+
   const projects = [{
     title: 'AI-Powered Financial Assistant',
     description: 'An intelligent financial management platform that helps users make smarter investment decisions.',
@@ -52,6 +59,7 @@ const Index = () => {
     image: 'https://images.unsplash.com/photo-1639322537228-f710d846310a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2232&q=80',
     tags: ['Blockchain', 'Supply Chain', 'Smart Contracts']
   }];
+
   const testimonials = [{
     quote: 'TechInnovate transformed our business with their AI solution. The increase in efficiency and accuracy exceeded our expectations.',
     author: 'Sarah Johnson',
@@ -68,6 +76,7 @@ const Index = () => {
     role: 'CEO',
     company: 'SecureChain'
   }];
+
   return <div className="min-h-screen flex flex-col">
       <Navbar />
       
@@ -124,7 +133,7 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
             {services.map((service, index) => <ServiceCard key={index} title={service.title} description={service.description} icon={service.icon} />)}
           </div>
         </div>
@@ -202,4 +211,5 @@ const Index = () => {
       <Footer />
     </div>;
 };
+
 export default Index;
