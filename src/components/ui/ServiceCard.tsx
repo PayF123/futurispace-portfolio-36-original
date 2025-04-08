@@ -32,7 +32,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         <div className="bg-gradient-to-r from-techblue-600 to-techpurple-600 p-3 rounded-lg w-fit mb-5">
           <Icon className="h-6 w-6 text-white" />
         </div>
-        <h3 className="text-xl font-semibold mb-3">{title}</h3>
+        <h3 className="text-xl font-bold mb-3 text-techblue-800">.NET</h3>
         <p className="text-gray-600 mb-4">{description}</p>
         <Link 
           to={link} 
