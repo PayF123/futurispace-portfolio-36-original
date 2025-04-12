@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Code, Database, Rocket, Palette, Layers, Server, Shield, Cpu, Cloud, LineChart, Network, Smartphone } from 'lucide-react';
@@ -94,6 +93,114 @@ const Services = () => {
           title: 'Interaction Design',
           description: 'Engaging animations and interactions that make your product feel responsive and alive.',
           icon: Smartphone,
+        },
+      ]
+    },
+    {
+      category: 'Cloud Solutions',
+      description: 'Scalable, secure cloud infrastructure and migration services to optimize your business operations.',
+      icon: Cloud,
+      services: [
+        {
+          title: 'Cloud Migration',
+          description: 'Seamlessly transition your existing infrastructure and applications to the cloud with minimal disruption.',
+          icon: Server,
+        },
+        {
+          title: 'Infrastructure as a Service',
+          description: 'Flexible, scalable cloud infrastructure that grows with your business needs.',
+          icon: Network,
+        },
+        {
+          title: 'DevOps Automation',
+          description: 'Streamline your development and operations with automated CI/CD pipelines and infrastructure as code.',
+          icon: Code,
+        },
+        {
+          title: 'Cloud Security',
+          description: 'Protect your cloud-based assets with comprehensive security protocols and monitoring.',
+          icon: Shield,
+        },
+      ]
+    },
+    {
+      category: 'Mobile App Development',
+      description: 'Create powerful, user-friendly mobile applications for iOS and Android platforms.',
+      icon: Smartphone,
+      services: [
+        {
+          title: 'iOS Development',
+          description: 'Native iOS applications that leverage the full capabilities of Apple\'s ecosystem.',
+          icon: Layers,
+        },
+        {
+          title: 'Android Development',
+          description: 'Powerful Android applications optimized for the diverse range of Android devices.',
+          icon: Cpu,
+        },
+        {
+          title: 'Cross-Platform Development',
+          description: 'Efficient development across multiple platforms using React Native, Flutter, or other frameworks.',
+          icon: Code,
+        },
+        {
+          title: 'App Maintenance',
+          description: 'Ongoing support and updates to keep your app running smoothly and securely.',
+          icon: Shield,
+        },
+      ]
+    },
+    {
+      category: 'Data Analytics',
+      description: 'Transform your data into actionable insights with our advanced analytics solutions.',
+      icon: LineChart,
+      services: [
+        {
+          title: 'Business Intelligence',
+          description: 'Comprehensive dashboards and reporting tools that provide clear visibility into your business metrics.',
+          icon: Layers,
+        },
+        {
+          title: 'Big Data Processing',
+          description: 'Scalable solutions for managing and analyzing large volumes of structured and unstructured data.',
+          icon: Database,
+        },
+        {
+          title: 'Predictive Analytics',
+          description: 'Use historical data to forecast trends and anticipate future business needs.',
+          icon: LineChart,
+        },
+        {
+          title: 'Data Visualization',
+          description: 'Transform complex data into clear, actionable visualizations that drive business decisions.',
+          icon: Palette,
+        },
+      ]
+    },
+    {
+      category: '.NET Development',
+      description: 'Build robust, scalable enterprise applications with our expert .NET development services.',
+      icon: Code,
+      services: [
+        {
+          title: 'Web Applications',
+          description: 'Powerful, secure web applications using ASP.NET Core and related technologies.',
+          icon: Server,
+        },
+        {
+          title: 'Desktop Applications',
+          description: 'Robust desktop solutions using WPF, Windows Forms, or .NET MAUI.',
+          icon: Layers,
+        },
+        {
+          title: 'Microservices',
+          description: 'Scalable, maintainable microservice architectures built on .NET Core.',
+          icon: Network,
+        },
+        {
+          title: 'API Development',
+          description: 'Well-designed RESTful or GraphQL APIs that enable seamless integration with other systems.',
+          icon: Code,
         },
       ]
     },
