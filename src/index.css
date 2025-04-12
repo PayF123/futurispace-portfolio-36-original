@@ -14,7 +14,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 221.2 83.2% 53.3%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -31,7 +31,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 221.2 83.2% 53.3%;
 
     --radius: 0.5rem;
   }
@@ -46,7 +46,7 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -63,32 +63,32 @@
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --ring: 224.3 76.3% 48%;
   }
 
-  /* Custom TechInnovate colors */
+  /* Software company theme colors */
   :root {
-    --techblue-50: 217 100% 97%;
-    --techblue-100: 217 100% 91%;
-    --techblue-200: 217 100% 80%;
-    --techblue-300: 217 100% 69%;
-    --techblue-400: 217 100% 58%;
-    --techblue-500: 217 100% 47%;
-    --techblue-600: 217 100% 37%;
-    --techblue-700: 217 100% 27%;
-    --techblue-800: 217 100% 17%;
-    --techblue-900: 217 100% 7%;
+    --softblue-50: 214 100% 97%;
+    --softblue-100: 214 100% 92%;
+    --softblue-200: 213 100% 83%;
+    --softblue-300: 212 100% 74%;
+    --softblue-400: 213 100% 65%;
+    --softblue-500: 214 100% 56%;
+    --softblue-600: 217 91% 50%;
+    --softblue-700: 221 85% 44%;
+    --softblue-800: 224 76% 38%;
+    --softblue-900: 224 71% 32%;
     
-    --techpurple-50: 270 100% 97%;
-    --techpurple-100: 270 100% 91%;
-    --techpurple-200: 270 100% 80%;
-    --techpurple-300: 270 100% 69%;
-    --techpurple-400: 270 100% 58%;
-    --techpurple-500: 270 100% 47%;
-    --techpurple-600: 270 100% 37%;
-    --techpurple-700: 270 100% 27%;
-    --techpurple-800: 270 100% 17%;
-    --techpurple-900: 270 100% 7%;
+    --indigo-50: 226 100% 97%;
+    --indigo-100: 226 100% 94%;
+    --indigo-200: 228 96% 89%;
+    --indigo-300: 230 94% 82%;
+    --indigo-400: 234 89% 74%;
+    --indigo-500: 239 84% 67%;
+    --indigo-600: 243 75% 59%;
+    --indigo-700: 245 58% 51%;
+    --indigo-800: 244 55% 41%;
+    --indigo-900: 242 47% 34%;
   }
 }
 
@@ -102,7 +102,7 @@
   }
   
   .text-gradient {
-    @apply bg-gradient-to-r from-techblue-600 to-techpurple-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent;
   }
   
   .glass {
@@ -115,6 +115,22 @@
   
   .subtle-shift:hover {
     transform: translateY(-5px);
+  }
+  
+  .code-block {
+    @apply bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm;
+  }
+  
+  .tech-card {
+    @apply bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-all;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-4;
+  }
+  
+  .section-subtitle {
+    @apply text-lg text-gray-600 mb-10 max-w-2xl mx-auto;
   }
 }
 
@@ -132,6 +148,7 @@
 
 .animate-gradient {
   animation: gradient 15s ease infinite;
+  background-size: 200% 200%;
 }
 
 @keyframes fadeIn {
@@ -147,4 +164,15 @@
 
 .animate-fadeIn {
   animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.typing-animation {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3.5s steps(40, end);
 }
