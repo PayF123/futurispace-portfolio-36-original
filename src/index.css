@@ -14,7 +14,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 221.2 83.2% 53.3%;
+    --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -89,6 +89,10 @@
     --indigo-700: 245 58% 51%;
     --indigo-800: 244 55% 41%;
     --indigo-900: 242 47% 34%;
+    
+    --tech-dark: 215 28% 17%;
+    --tech-medium: 215 20% 65%;
+    --tech-light: 210 40% 98%;
   }
 }
 
@@ -102,7 +106,7 @@
   }
   
   .text-gradient {
-    @apply bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-techblue-600 to-techpurple-600 bg-clip-text text-transparent;
   }
   
   .glass {
@@ -118,7 +122,7 @@
   }
   
   .code-block {
-    @apply bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm;
+    @apply bg-tech-dark text-tech-light p-4 rounded-lg font-mono text-sm;
   }
   
   .tech-card {
