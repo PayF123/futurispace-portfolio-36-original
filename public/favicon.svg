@@ -1,0 +1,21 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32" height="32">
+  <!-- Background -->
+  <rect width="100" height="100" rx="15" fill="#1A1F2C" />
+  
+  <!-- Data blocks grid pattern -->
+  <rect x="15" y="50" width="15" height="15" rx="2" fill="#6366F1" opacity="0.9" />
+  <rect x="35" y="50" width="15" height="15" rx="2" fill="#6366F1" opacity="0.7" />
+  <rect x="55" y="50" width="15" height="15" rx="2" fill="#6366F1" opacity="0.5" />
+  <rect x="15" y="70" width="15" height="15" rx="2" fill="#6366F1" opacity="0.6" />
+  <rect x="35" y="70" width="15" height="15" rx="2" fill="#6366F1" opacity="0.8" />
+  <rect x="55" y="70" width="15" height="15" rx="2" fill="#6366F1" opacity="0.4" />
+  
+  <!-- Brain abstraction (simplified) -->
+  <path d="M70 35C70 22.85 60.15 13 48 13C35.85 13 26 22.85 26 35C26 41.6 29.04 47.47 33.94 51.06C34.81 51.71 35.18 52.85 34.75 53.82L30.16 63.5H65.84L61.25 53.82C60.82 52.85 61.19 51.71 62.06 51.06C66.96 47.47 70 41.6 70 35Z" fill="#9333EA" />
+  
+  <!-- Connection lines -->
+  <path d="M48 60 L48 70" stroke="#C084FC" stroke-width="2" stroke-linecap="round" />
+  <path d="M55 55 L60 65" stroke="#C084FC" stroke-width="2" stroke-linecap="round" />
+  <path d="M41 55 L36 65" stroke="#C084FC" stroke-width="2" stroke-linecap="round" />
+</svg>
