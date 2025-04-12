@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Code, Rocket, Database, Palette, Cloud, Smartphone, LineChart, Code2 } from 'lucide-react';
+import { Code, Rocket, Database, Palette, Cloud, Smartphone, LineChart, Code2, Gamepad, Globe, Monitor, Cpu } from 'lucide-react';
 import ServiceCard from '@/components/ui/ServiceCard';
 
 const ServicesSection = () => {
@@ -39,6 +39,24 @@ const ServicesSection = () => {
     description: 'Build robust, scalable enterprise applications with our expert .NET development services.',
     icon: Code2
   }];
+  
+  const emergingTechServices = [{
+    title: 'Game Development',
+    description: 'Create engaging and immersive gaming experiences across multiple platforms with cutting-edge technology.',
+    icon: Gamepad
+  }, {
+    title: 'Metaverse Development',
+    description: 'Build virtual worlds and experiences that connect users in the emerging metaverse landscape.',
+    icon: Globe
+  }, {
+    title: 'Web Development',
+    description: 'Develop modern, responsive websites and web applications that drive user engagement and business growth.',
+    icon: Monitor
+  }, {
+    title: 'IoT Development',
+    description: 'Connect devices and systems with innovative Internet of Things solutions that transform data into valuable insights.',
+    icon: Cpu
+  }];
 
   return (
     <section className="py-20 bg-gray-50">
@@ -55,12 +73,33 @@ const ServicesSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => <ServiceCard key={index} title={service.title} description={service.description} icon={service.icon} />)}
+        <div className="mb-16">
+          <h3 className="text-center text-2xl font-semibold mb-8 text-techblue-800">Core Technologies</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service, index) => <ServiceCard key={index} title={service.title} description={service.description} icon={service.icon} />)}
+          </div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-          {additionalServices.map((service, index) => <ServiceCard key={`additional-${index}`} title={service.title} description={service.description} icon={service.icon} />)}
+        <div className="mb-16">
+          <h3 className="text-center text-2xl font-semibold mb-8 text-techblue-800">Business Solutions</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {additionalServices.map((service, index) => <ServiceCard key={`additional-${index}`} title={service.title} description={service.description} icon={service.icon} />)}
+          </div>
+        </div>
+        
+        <div>
+          <h3 className="text-center text-2xl font-semibold mb-8 text-techpurple-800">Emerging Technologies</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {emergingTechServices.map((service, index) => (
+              <ServiceCard 
+                key={`emerging-${index}`} 
+                title={service.title} 
+                description={service.description} 
+                icon={service.icon}
+                className="hover:border-techpurple-300/50" 
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
