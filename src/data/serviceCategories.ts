@@ -1,4 +1,3 @@
-
 import { 
   Code, 
   Database, 
@@ -11,7 +10,11 @@ import {
   Cloud, 
   LineChart, 
   Network, 
-  Smartphone 
+  Smartphone,
+  Gamepad,
+  Globe,
+  MonitorSmartphone,
+  WifiIcon
 } from 'lucide-react';
 import { ServiceCategory } from '@/components/services/ServiceCategorySection';
 
@@ -209,6 +212,114 @@ export const serviceCategories: ServiceCategory[] = [
         title: 'API Development',
         description: 'Well-designed RESTful or GraphQL APIs that enable seamless integration with other systems.',
         icon: Code,
+      },
+    ]
+  },
+  {
+    category: 'Game Development',
+    description: 'Create engaging, immersive gaming experiences across multiple platforms with our expert game development services.',
+    icon: Gamepad,
+    services: [
+      {
+        title: '2D/3D Game Design',
+        description: 'Custom game design with captivating visuals, storylines, and gameplay mechanics tailored to your audience.',
+        icon: Layers,
+      },
+      {
+        title: 'Unity Development',
+        description: 'Cross-platform game development using Unity, enabling deployment across mobile, desktop, console, and web.',
+        icon: Code,
+      },
+      {
+        title: 'Game Backend Systems',
+        description: 'Robust, scalable backend infrastructure for multiplayer games, leaderboards, and user accounts.',
+        icon: Server,
+      },
+      {
+        title: 'Game Optimization',
+        description: 'Performance optimization to ensure smooth gameplay across various devices and platforms.',
+        icon: Cpu,
+      },
+    ]
+  },
+  {
+    category: 'Metaverse Development',
+    description: 'Build immersive digital worlds and experiences that connect users in virtual spaces with cutting-edge metaverse technologies.',
+    icon: Globe,
+    services: [
+      {
+        title: 'Virtual Worlds',
+        description: 'Design and development of interactive 3D virtual environments for social interaction, commerce, and entertainment.',
+        icon: Rocket,
+      },
+      {
+        title: 'Digital Twin Creation',
+        description: 'Virtual replicas of physical spaces and objects with real-time data synchronization for training and simulation.',
+        icon: Layers,
+      },
+      {
+        title: 'NFT Marketplaces',
+        description: 'Custom marketplaces for trading digital assets and virtual real estate within metaverse environments.',
+        icon: Database,
+      },
+      {
+        title: 'Cross-Platform Integration',
+        description: 'Seamless integration between different metaverse platforms, enabling unified virtual experiences.',
+        icon: Network,
+      },
+    ]
+  },
+  {
+    category: 'Web Development',
+    description: 'Create powerful, responsive web applications with modern frameworks and technologies tailored to your business needs.',
+    icon: MonitorSmartphone,
+    services: [
+      {
+        title: 'Frontend Development',
+        description: 'Responsive, interactive user interfaces built with modern frameworks like React, Vue, and Angular.',
+        icon: Palette,
+      },
+      {
+        title: 'Backend Development',
+        description: 'Robust server-side architecture using Node.js, Python, Java, or PHP with scalable database solutions.',
+        icon: Server,
+      },
+      {
+        title: 'E-commerce Solutions',
+        description: 'Custom online shopping experiences with secure payment processing and inventory management systems.',
+        icon: LineChart,
+      },
+      {
+        title: 'Progressive Web Apps',
+        description: 'Web applications that offer native app-like experiences with offline capabilities and fast performance.',
+        icon: Smartphone,
+      },
+    ]
+  },
+  {
+    category: 'IoT Development',
+    description: 'Connect the physical and digital worlds with custom Internet of Things solutions for smart homes, cities, and industries.',
+    icon: WifiIcon,
+    services: [
+      {
+        title: 'Smart Device Integration',
+        description: 'Connect and control physical devices through custom applications and centralized management systems.',
+        icon: Smartphone,
+      },
+      {
+        title: 'IoT Data Analytics',
+        description: 'Collect, process, and analyze data from IoT devices to derive actionable business insights.',
+        icon: LineChart,
+      },
+      {
+        title: 'Industrial IoT Solutions',
+        description: 'Optimize manufacturing and industrial processes with connected sensors and automated monitoring systems.',
+        icon: Cpu,
+      },
+      {
+        title: 'IoT Security',
+        description: 'Implement robust security protocols to protect IoT ecosystems from vulnerabilities and threats.',
+        icon: Shield,
       },
     ]
   },
