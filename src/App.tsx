@@ -10,6 +10,7 @@ import Work from "./pages/Work";
 import Insights from "./pages/Insights";
 import NotFound from "./pages/NotFound";
 import Contact from "./pages/Contact";
+import AiMl from "./pages/AiMl";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/ai-ml" element={<AiMl />} />
           <Route path="/work" element={<Work />} />
           <Route path="/insights" element={<Insights />} />
           <Route path="/contact" element={<Contact />} />
