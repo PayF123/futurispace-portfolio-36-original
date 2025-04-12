@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Code, Database, Rocket, Palette, Shield, Cloud, Smartphone, LineChart, Lock } from 'lucide-react';
+import { ArrowRight, Code, Database, Rocket, Palette, Shield, Cloud, Smartphone, LineChart, Code2 } from 'lucide-react';
 import AnimatedGradient from '@/components/ui/AnimatedGradient';
 import ServiceCard from '@/components/ui/ServiceCard';
 import ProjectCard from '@/components/ui/ProjectCard';
@@ -52,9 +52,9 @@ const Index = () => {
     description: 'Transform your data into actionable insights with our advanced analytics solutions.',
     icon: LineChart
   }, {
-    title: 'Cybersecurity',
-    description: 'Protect your digital assets with comprehensive security solutions against modern threats.',
-    icon: Lock
+    title: '.NET Development',
+    description: 'Build robust, scalable enterprise applications with our expert .NET development services.',
+    icon: Code2
   }];
 
   const projects = [{
