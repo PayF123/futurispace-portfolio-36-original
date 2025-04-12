@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Building2 } from 'lucide-react';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 const OurStory = () => {
   return (
@@ -23,11 +24,15 @@ const OurStory = () => {
               </div>
             </div>
             <div className="md:w-1/2">
-              <div className="relative h-64 md:h-80 overflow-hidden rounded-lg shadow-xl">
+              <div className="relative overflow-hidden rounded-lg shadow-xl">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 z-10"></div>
-                <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
-                  <Building2 className="h-32 w-32 text-blue-500/30" />
-                </div>
+                <AspectRatio ratio={16/9} className="w-full">
+                  <img 
+                    src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" 
+                    alt="Team collaboration at CognitiveDatablocks" 
+                    className="object-cover w-full h-full"
+                  />
+                </AspectRatio>
               </div>
             </div>
           </div>
