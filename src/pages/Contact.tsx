@@ -141,7 +141,7 @@ const Contact = () => {
             <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center">Find Us</h2>
             <div className="h-96 rounded-2xl overflow-hidden shadow-lg">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.584773797549!2d72.5324267746897!3d23.07369797914358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9b2a70ef27a9%3A0xf1211cbe01a47457!2sSolaris%20Business%20Hub%2C%20Nr.%20Parshwanath%20Jain%20Mandir%2C%20Sola%2C%20Ahmedabad%2C%20Gujarat%20380061!5e0!3m2!1sen!2sin!4v1713206925421!5m2!1sen!2sin" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.584435096247!2d72.5298091756955!3d23.073763013558602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e83417ead915b%3A0xfdcfc6cf89f1dab0!2sSolaris!5e0!3m2!1sen!2sin!4v1714680280323!5m2!1sen!2sin"
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
