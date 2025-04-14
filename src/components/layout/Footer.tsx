@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, Github } from 'lucide-react';
@@ -100,8 +99,7 @@ const Footer = () => {
               <li className="flex items-start">
                 <MapPin className="w-5 h-5 mr-3 text-blue-400 flex-shrink-0 mt-1" />
                 <span className="text-gray-400">
-                  100 Technology Drive, Suite 300<br />
-                  San Francisco, CA 94103, USA
+                  841, 1st Block, Solaris Business Hub, Nr. Parshwanath Jain Mandir Bhuyangdev, Sola Rd, Ahmedabad, Gujarat 380013
                 </span>
               </li>
             </ul>
