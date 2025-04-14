@@ -1,3 +1,4 @@
+
 import React from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -139,10 +140,17 @@ const Contact = () => {
           <div className="container mx-auto px-4 md:px-6">
             <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center">Find Us</h2>
             <div className="h-96 rounded-2xl overflow-hidden shadow-lg">
-              {/* Placeholder for map - would be replaced with actual Google Maps integration */}
-              <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-                <p className="text-gray-500 text-lg">Google Maps would be embedded here</p>
-              </div>
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.584773797549!2d72.5324267746897!3d23.07369797914358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9b2a70ef27a9%3A0xf1211cbe01a47457!2sSolaris%20Business%20Hub%2C%20Nr.%20Parshwanath%20Jain%20Mandir%2C%20Sola%2C%20Ahmedabad%2C%20Gujarat%20380061!5e0!3m2!1sen!2sin!4v1713206925421!5m2!1sen!2sin" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen={true} 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Our Office Location"
+                className="w-full h-full"
+              ></iframe>
             </div>
           </div>
         </section>
