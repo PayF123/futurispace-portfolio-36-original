@@ -4,17 +4,17 @@ import TestimonialCard from '@/components/ui/TestimonialCard';
 
 const TestimonialsSection = () => {
   const testimonials = [{
-    quote: 'TechInnovate transformed our business with their AI solution. The increase in efficiency and accuracy exceeded our expectations.',
+    quote: 'CognitiveDatablocks transformed our business with their AI solution. The increase in efficiency and accuracy exceeded our expectations.',
     author: 'Sarah Johnson',
     role: 'CTO',
     company: 'Global Finance Inc.'
   }, {
-    quote: 'The AR experience created by TechInnovate revolutionized how our customers interact with our products. Sales have increased by 45%.',
+    quote: 'The AR experience created by CognitiveDatablocks revolutionized how our customers interact with our products. Sales have increased by 45%.',
     author: 'Mark Williams',
     role: 'Marketing Director',
     company: 'Retail Solutions'
   }, {
-    quote: 'Their blockchain solution provided the security and transparency we needed. Working with TechInnovate was seamless and professional.',
+    quote: 'Their blockchain solution provided the security and transparency we needed. Working with CognitiveDatablocks was seamless and professional.',
     author: 'David Chen',
     role: 'CEO',
     company: 'SecureChain'
