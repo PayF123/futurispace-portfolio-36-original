@@ -1,4 +1,3 @@
-
 import React from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -39,9 +38,7 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold text-lg mb-2">Visit Us</h3>
                       <p className="text-gray-600">
-                        1234 Tech Avenue<br />
-                        Silicon Valley, CA 94043<br />
-                        United States
+                        841, 1st Block, Solaris Business Hub, Nr. Parshwanath Jain Mandir Bhuyangdev, Sola Rd, Ahmedabad, Gujarat 380013
                       </p>
                     </div>
                   </div>
