@@ -1,4 +1,3 @@
-
 import React from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -141,7 +140,7 @@ const Contact = () => {
             <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center">Find Us</h2>
             <div className="h-96 rounded-2xl overflow-hidden shadow-lg">
               <iframe 
-                src="https://www.google.com/maps/place/%E0%A6%B8%E0%A7%8B%E0%A6%B2%E0%A6%BE%E0%A6%B0%E0%A6%BF%E0%A6%B8+%E0%A6%AC%E0%A6%BF%E0%A6%9C%E0%A6%A8%E0%A7%87%E0%A6%B8+%E0%A6%B9%E0%A6%BE%E0%A6%AC/@23.0584752,72.5391023,810m/data=!3m2!1e3!4b1!4m6!3m5!1s0x395e855d754079cd:0x56eb1329773be8e8!8m2!3d23.0584752!4d72.5391023!16s%2Fg%2F11h7k78qh9?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.584435096247!2d72.5298091756955!3d23.073763013558602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e83417ead915b%3A0xfdcfc6cf89f1dab0!2sSolaris!5e0!3m2!1sen!2sin!4v1714680280323!5m2!1sen!2sin"
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
