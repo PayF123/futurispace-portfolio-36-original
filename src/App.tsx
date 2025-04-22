@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Work from "./pages/Work";
 import Insights from "./pages/Insights";
+import InsightDetail from "./pages/InsightDetail";
 import NotFound from "./pages/NotFound";
 import Contact from "./pages/Contact";
 import AiMl from "./pages/AiMl";
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/ai-ml" element={<AiMl />} />
           <Route path="/work" element={<Work />} />
           <Route path="/insights" element={<Insights />} />
+          <Route path="/insights/:slug" element={<InsightDetail />} />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

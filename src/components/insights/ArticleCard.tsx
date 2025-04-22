@@ -9,6 +9,7 @@ interface Article {
   category: string;
   date: string;
   readTime: string;
+  slug: string;
 }
 
 const ArticleCard: React.FC<{ article: Article }> = ({ article }) => (
@@ -31,11 +32,11 @@ const ArticleCard: React.FC<{ article: Article }> = ({ article }) => (
         <span className="text-sm text-gray-500">{article.readTime}</span>
       </div>
       <h3 className="text-xl font-semibold mb-3 hover:text-techpurple-600 transition-colors">
-        <a href="#">{article.title}</a>
+        <a href={`/insights/${article.slug}`}>{article.title}</a>
       </h3>
       <p className="text-gray-600 mb-4 flex-grow">{article.excerpt}</p>
       <a 
-        href="#" 
+        href={`/insights/${article.slug}`} 
         className="inline-flex items-center font-medium text-techpurple-600 hover:text-techpurple-700 mt-auto"
       >
         Read More
@@ -46,3 +47,4 @@ const ArticleCard: React.FC<{ article: Article }> = ({ article }) => (
 );
 
 export default ArticleCard;
+

@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -6,11 +7,19 @@ import CategoryFilter from '@/components/insights/CategoryFilter';
 import ArticleCard from '@/components/insights/ArticleCard';
 import NewsletterSection from '@/components/insights/NewsletterSection';
 
+// Utility to create a slug from a title
+const slugify = (text: string) =>
+  text
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-');
+
 const Insights = () => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
-  
+
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
@@ -21,8 +30,8 @@ const Insights = () => {
       setEmail('');
     }, 1500);
   };
-  
-  const articles = [
+
+  const articlesData = [
     {
       title: 'The Future of AI in Business Transformation',
       excerpt: 'Explore how artificial intelligence is revolutionizing business processes and creating new opportunities for growth and innovation.',
@@ -72,7 +81,13 @@ const Insights = () => {
       readTime: '6 min read',
     },
   ];
-  
+
+  // Add slug for each article
+  const articles = articlesData.map(article => ({
+    ...article,
+    slug: slugify(article.title),
+  }));
+
   const categories = [
     { name: 'All', count: articles.length },
     { name: 'AI', count: articles.filter(a => a.category === 'AI').length },
@@ -80,13 +95,13 @@ const Insights = () => {
     { name: 'Blockchain', count: articles.filter(a => a.category === 'Blockchain').length },
     { name: 'UI/UX', count: articles.filter(a => a.category === 'UI/UX').length },
   ];
-  
+
   const [selectedCategory, setSelectedCategory] = useState('All');
-  
+
   const filteredArticles = selectedCategory === 'All' 
     ? articles 
     : articles.filter(article => article.category === selectedCategory);
-  
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -103,7 +118,7 @@ const Insights = () => {
           {/* Articles Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredArticles.map((article, index) => (
-              <ArticleCard key={index} article={article} />
+              <ArticleCard key={article.slug} article={article} />
             ))}
           </div>
         </div>
@@ -121,3 +136,4 @@ const Insights = () => {
 };
 
 export default Insights;
+
