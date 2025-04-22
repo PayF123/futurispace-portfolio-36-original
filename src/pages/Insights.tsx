@@ -29,7 +29,7 @@ const Insights = () => {
     {
       title: 'The Future of AI in Business Transformation',
       excerpt: 'Explore how artificial intelligence is revolutionizing business processes and creating new opportunities for growth and innovation.',
-      image: 'https://images.unsplash.com/photo-1677442135131-4d7c122a4566?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2232&q=80',
+      image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
       category: 'AI',
       date: 'June 12, 2023',
       readTime: '5 min read',
