@@ -2,6 +2,7 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { useNavigate } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 
 interface ProjectCardProps {
   title: string;
@@ -20,8 +21,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   const navigate = useNavigate();
 
-  const handleContactClick = (e: React.MouseEvent) => {
-    e.preventDefault();
+  const handleContactClick = () => {
+    // Using direct navigation without preventDefault since we're using a button now
+    console.log('Navigating to contact page...');
     navigate('/contact');
   };
 
@@ -56,15 +58,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <h3 className="text-xl font-semibold mb-2 transition-all group-hover:text-techpurple-600">{title}</h3>
         <p className="text-gray-600 mb-4">{description}</p>
         
-        <button 
+        <Button 
           onClick={handleContactClick}
-          className="inline-flex items-center font-medium text-techpurple-600 hover:text-techpurple-700"
+          variant="link"
+          className="p-0 text-techpurple-600 hover:text-techpurple-700 font-medium h-auto"
         >
           Contact for details
           <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
-        </button>
+        </Button>
       </div>
       
       <div className="absolute inset-0 border-2 border-transparent opacity-0 group-hover:opacity-100 group-hover:border-techpurple-400/30 rounded-2xl transition-all duration-300" />
