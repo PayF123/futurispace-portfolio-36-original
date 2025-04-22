@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -59,7 +58,7 @@ const Insights = () => {
     {
       title: 'The Role of Machine Learning in Predictive Maintenance',
       excerpt: 'Explore how machine learning is being used to predict equipment failures and optimize maintenance schedules in industrial settings.',
-      image: 'https://images.unsplash.com/photo-1576400883215-7083592054d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
       category: 'AI',
       date: 'February 19, 2023',
       readTime: '5 min read',
