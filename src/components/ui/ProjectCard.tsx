@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 interface ProjectCardProps {
   title: string;
@@ -21,7 +22,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
   const handleContactClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    console.log('Navigating to contact page');
     navigate('/contact');
   };
 
