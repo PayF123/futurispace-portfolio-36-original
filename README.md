@@ -3,6 +3,7 @@
 ## Project info
 
 **URL**: https://lovable.dev/projects/87871142-dfd1-4cd1-a098-0eeb2d946d40
+
 **NETLIFY URL**: https://cognitivedatablock.netlify.app/
 
 ## How can I edit this code?
