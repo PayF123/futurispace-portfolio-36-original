@@ -22,9 +22,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   const navigate = useNavigate();
 
   const handleContactClick = () => {
-    // Using direct navigation without preventDefault since we're using a button now
+    // Explicitly log before navigation to confirm function is called
     console.log('Navigating to contact page...');
-    navigate('/contact');
+    // Force navigation with replace to ensure it works
+    navigate('/contact', { replace: true });
   };
 
   return (
@@ -58,10 +59,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <h3 className="text-xl font-semibold mb-2 transition-all group-hover:text-techpurple-600">{title}</h3>
         <p className="text-gray-600 mb-4">{description}</p>
         
+        {/* Use a more prominent button that's easier to click */}
         <Button 
           onClick={handleContactClick}
-          variant="link"
-          className="p-0 text-techpurple-600 hover:text-techpurple-700 font-medium h-auto"
+          className="px-4 py-2 bg-techpurple-600 text-white rounded-md hover:bg-techpurple-700 transition-colors"
         >
           Contact for details
           <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
