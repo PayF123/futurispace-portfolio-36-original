@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { NavLink } from 'react-router-dom';
 
 interface Article {
   title: string;
@@ -32,19 +33,18 @@ const ArticleCard: React.FC<{ article: Article }> = ({ article }) => (
         <span className="text-sm text-gray-500">{article.readTime}</span>
       </div>
       <h3 className="text-xl font-semibold mb-3 hover:text-techpurple-600 transition-colors">
-        <a href={`/insights/${article.slug}`}>{article.title}</a>
+        <NavLink to={`/insights/${article.slug}`}>{article.title}</NavLink>
       </h3>
       <p className="text-gray-600 mb-4 flex-grow">{article.excerpt}</p>
-      <a 
-        href={`/insights/${article.slug}`} 
+      <NavLink 
+        to={`/insights/${article.slug}`} 
         className="inline-flex items-center font-medium text-techpurple-600 hover:text-techpurple-700 mt-auto"
       >
         Read More
         <ArrowRight className="ml-2 h-4 w-4" />
-      </a>
+      </NavLink>
     </div>
   </div>
 );
 
 export default ArticleCard;
-
