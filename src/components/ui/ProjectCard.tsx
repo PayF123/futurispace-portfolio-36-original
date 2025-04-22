@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { useNavigate } from 'react-router-dom';
@@ -22,9 +21,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   const navigate = useNavigate();
 
   const handleContactClick = () => {
-    // Explicitly log before navigation to confirm function is called
-    console.log('Navigating to contact page...');
-    // Force navigation with replace to ensure it works
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
     navigate('/contact', { replace: true });
   };
 
@@ -59,7 +56,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <h3 className="text-xl font-semibold mb-2 transition-all group-hover:text-techpurple-600">{title}</h3>
         <p className="text-gray-600 mb-4">{description}</p>
         
-        {/* Use a more prominent button that's easier to click */}
         <Button 
           onClick={handleContactClick}
           className="px-4 py-2 bg-techpurple-600 text-white rounded-md hover:bg-techpurple-700 transition-colors"
