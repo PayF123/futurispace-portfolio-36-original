@@ -20,11 +20,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   const navigate = useNavigate();
 
-  const handleContactClick = () => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
-    navigate('/contact', { replace: true });
-  };
-
   return (
     <div 
       className={cn(
@@ -57,7 +52,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <p className="text-gray-600 mb-4">{description}</p>
         
         <Button 
-          onClick={handleContactClick}
+          onClick={() => navigate('/contact')}
           className="px-4 py-2 bg-techpurple-600 text-white rounded-md hover:bg-techpurple-700 transition-colors"
         >
           Contact for details
