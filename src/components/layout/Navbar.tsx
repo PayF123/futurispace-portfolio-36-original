@@ -52,20 +52,17 @@ export const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Reset scroll position and close mobile menu when route changes
   useEffect(() => {
     setIsMobileMenuOpen(false);
-  }, [location]);
-
-  // Scroll to top when a navigation link is clicked
-  const handleNavClick = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <header className={cn('fixed top-0 left-0 right-0 z-50 transition-all duration-300', isScrolled ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md py-3 shadow-md' : 'bg-transparent py-5')}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
-          <NavLink to="/" className="flex items-center text-2xl font-bold" onClick={handleNavClick}>
+          <NavLink to="/" className="flex items-center text-2xl font-bold">
             <div className="mr-2 flex items-center justify-center bg-gradient-to-r from-blue-600 to-indigo-600 w-8 h-8 rounded-md">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
                    strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 text-white">
@@ -84,7 +81,6 @@ export const Navbar = () => {
               <NavLink 
                 key={link.path} 
                 to={link.path} 
-                onClick={handleNavClick}
                 className={({isActive}) => cn(
                   'relative font-medium transition-colors duration-200',
                   'hover:text-blue-600 after:absolute after:bottom-[-4px]',
@@ -120,7 +116,6 @@ export const Navbar = () => {
             <NavLink 
               key={link.path} 
               to={link.path} 
-              onClick={handleNavClick}
               className={({isActive}) => cn(
                 'text-xl font-medium transition-colors duration-200 flex items-center',
                 isActive 
@@ -144,4 +139,3 @@ export const Navbar = () => {
 };
 
 export default Navbar;
-
