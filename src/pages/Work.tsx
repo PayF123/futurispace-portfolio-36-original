@@ -5,9 +5,12 @@ import ProjectCard from '@/components/ui/ProjectCard';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import { cn } from '@/lib/utils';
+import { useNavigate } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 
 const Work = () => {
   const [filter, setFilter] = useState('all');
+  const navigate = useNavigate();
   
   const projects = [
     {
@@ -155,12 +158,12 @@ const Work = () => {
               <p className="text-gray-600 mb-8">
                 We're always looking for new challenges. Let's discuss how we can turn your idea into reality.
               </p>
-              <a 
-                href="/contact" 
+              <Button 
+                onClick={() => navigate('/contact')}
                 className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-techblue-600 text-white hover:bg-techblue-700 transition-all shadow-lg hover:shadow-xl transform hover:translate-y-[-2px]"
               >
                 Start a Project
-              </a>
+              </Button>
             </div>
           </div>
         </div>
