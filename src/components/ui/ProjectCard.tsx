@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { Link } from 'react-router-dom';
@@ -17,7 +16,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   description,
   image,
   tags,
-  link = '#',
   className,
 }) => {
   return (
@@ -52,10 +50,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <p className="text-gray-600 mb-4">{description}</p>
         
         <Link 
-          to={link} 
+          to="/contact" 
           className="inline-flex items-center font-medium text-techpurple-600 hover:text-techpurple-700"
         >
-          View Project
+          Contact for details
           <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
