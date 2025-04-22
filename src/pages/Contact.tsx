@@ -1,10 +1,16 @@
+
 import React from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import AnimatedGradient from "@/components/ui/AnimatedGradient";
 import { MapPin, Mail, Phone } from "lucide-react";
+import { useEffect } from "react";
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -161,3 +167,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
