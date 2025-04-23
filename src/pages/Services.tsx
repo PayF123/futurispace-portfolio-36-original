@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -10,9 +10,25 @@ import { serviceCategories } from '@/data/serviceCategories';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 const Services: React.FC = () => {
-  const [activeTab, setActiveTab] = useState(serviceCategories[0].category.toLowerCase().replace(/\s+/g, '-'));
+  // Get active tab from localStorage or use default
+  const getInitialTab = () => {
+    const savedTab = localStorage.getItem('activeServiceTab');
+    if (savedTab) {
+      localStorage.removeItem('activeServiceTab'); // Clear after using it
+      return savedTab;
+    }
+    return serviceCategories[0].category.toLowerCase().replace(/\s+/g, '-');
+  };
+
+  const [activeTab, setActiveTab] = useState(getInitialTab());
   const isMobile = useIsMobile();
   
+  // Scroll to the appropriate section if needed
+  useEffect(() => {
+    // Scroll to top when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Navbar />

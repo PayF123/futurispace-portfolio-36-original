@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, Github } from 'lucide-react';
@@ -45,19 +46,44 @@ const Footer = () => {
             <h4 className="font-semibold text-lg mb-6">Solutions</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/services#ai-development" className="text-gray-400 hover:text-white transition-colors">AI Development</Link>
+                <Link to="/services" onClick={() => {
+                  localStorage.setItem('activeServiceTab', 'ai-development');
+                  window.scrollTo(0, 0);
+                }} className="text-gray-400 hover:text-white transition-colors">
+                  AI Development
+                </Link>
               </li>
               <li>
-                <Link to="/services#ar-vr-solutions" className="text-gray-400 hover:text-white transition-colors">AR/VR Solutions</Link>
+                <Link to="/services" onClick={() => {
+                  localStorage.setItem('activeServiceTab', 'ar-vr-solutions');
+                  window.scrollTo(0, 0);
+                }} className="text-gray-400 hover:text-white transition-colors">
+                  AR/VR Solutions
+                </Link>
               </li>
               <li>
-                <Link to="/services#blockchain-development" className="text-gray-400 hover:text-white transition-colors">Blockchain Development</Link>
+                <Link to="/services" onClick={() => {
+                  localStorage.setItem('activeServiceTab', 'blockchain-development');
+                  window.scrollTo(0, 0);
+                }} className="text-gray-400 hover:text-white transition-colors">
+                  Blockchain Development
+                </Link>
               </li>
               <li>
-                <Link to="/services#ui-ux-design" className="text-gray-400 hover:text-white transition-colors">UI/UX Design</Link>
+                <Link to="/services" onClick={() => {
+                  localStorage.setItem('activeServiceTab', 'ui-ux-design');
+                  window.scrollTo(0, 0);
+                }} className="text-gray-400 hover:text-white transition-colors">
+                  UI/UX Design
+                </Link>
               </li>
               <li>
-                <Link to="/services#cloud-solutions" className="text-gray-400 hover:text-white transition-colors">Cloud Solutions</Link>
+                <Link to="/services" onClick={() => {
+                  localStorage.setItem('activeServiceTab', 'cloud-solutions');
+                  window.scrollTo(0, 0);
+                }} className="text-gray-400 hover:text-white transition-colors">
+                  Cloud Solutions
+                </Link>
               </li>
             </ul>
           </div>
