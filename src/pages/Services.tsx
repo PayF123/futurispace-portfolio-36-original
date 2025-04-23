@@ -39,6 +39,7 @@ const Services: React.FC = () => {
         <div className="container mx-auto px-4 md:px-8">
           <Tabs 
             defaultValue={activeTab}
+            value={activeTab}
             onValueChange={setActiveTab}
             className="w-full"
           >
