@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, Github } from 'lucide-react';
@@ -45,19 +46,19 @@ const Footer = () => {
             <h4 className="font-semibold text-lg mb-6">Solutions</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/services" className="text-gray-400 hover:text-white transition-colors">Custom Software</Link>
+                <Link to="/services" className="text-gray-400 hover:text-white transition-colors">AI Development</Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-400 hover:text-white transition-colors">Cloud Engineering</Link>
+                <Link to="/services" className="text-gray-400 hover:text-white transition-colors">AR/VR Solutions</Link>
               </li>
               <li>
-                <Link to="/ai-ml" className="text-gray-400 hover:text-white transition-colors">AI & Machine Learning</Link>
+                <Link to="/services" className="text-gray-400 hover:text-white transition-colors">Blockchain Development</Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-400 hover:text-white transition-colors">DevOps</Link>
+                <Link to="/services" className="text-gray-400 hover:text-white transition-colors">UI/UX Design</Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-400 hover:text-white transition-colors">Data Analytics</Link>
+                <Link to="/services" className="text-gray-400 hover:text-white transition-colors">Cloud Solutions</Link>
               </li>
             </ul>
           </div>
@@ -125,3 +126,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
