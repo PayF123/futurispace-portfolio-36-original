@@ -5,7 +5,7 @@ import Footer from '@/components/layout/Footer';
 import AboutHero from '@/components/about/AboutHero';
 import OurStory from '@/components/about/OurStory';
 import CoreValues from '@/components/about/CoreValues';
-import LeadershipTeam from '@/components/about/LeadershipTeam';
+// Removed LeadershipTeam import
 
 const About = () => {
   return (
@@ -16,7 +16,7 @@ const About = () => {
         <AboutHero />
         <OurStory />
         <CoreValues />
-        <LeadershipTeam />
+        {/* Removed LeadershipTeam component */}
       </main>
 
       <Footer />
