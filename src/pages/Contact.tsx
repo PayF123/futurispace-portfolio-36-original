@@ -1,50 +1,13 @@
-
 import React, { useEffect } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import AnimatedGradient from "@/components/ui/AnimatedGradient";
 import { MapPin, Mail, Phone } from "lucide-react";
-import { useForm } from "react-hook-form";
-import {
-  Form,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-
-type ContactFormValues = {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-};
 
 const Contact = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "auto" });
   }, []);
-
-  const form = useForm<ContactFormValues>({
-    mode: "onTouched",
-    defaultValues: {
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    },
-  });
-
-  function onSubmit(values: ContactFormValues) {
-    alert(
-      `Thank you for contacting us!\n\nName: ${values.name}\nEmail: ${values.email}\nSubject: ${values.subject}\nMessage: ${values.message}`
-    );
-    form.reset();
-  }
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -65,7 +28,7 @@ const Contact = () => {
           </div>
         </AnimatedGradient>
 
-        {/* Contact Information and Form */}
+        {/* Contact Information Only, form removed */}
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -108,88 +71,9 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Contact Form */}
-              <div className="glass rounded-2xl p-8 md:p-10">
-                <h2 className="text-2xl md:text-3xl font-bold mb-8">Send a Message</h2>
-
-                <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <FormField
-                        control={form.control}
-                        name="name"
-                        rules={{ required: "Name is required" }}
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Name</FormLabel>
-                            <FormControl>
-                              <Input placeholder="Your name" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      <FormField
-                        control={form.control}
-                        name="email"
-                        rules={{
-                          required: "Email is required",
-                          pattern: {
-                            value: /\S+@\S+\.\S+/,
-                            message: "Please enter a valid email",
-                          },
-                        }}
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Email</FormLabel>
-                            <FormControl>
-                              <Input placeholder="your@email.com" type="email" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                    </div>
-                    <FormField
-                      control={form.control}
-                      name="subject"
-                      rules={{ required: "Subject is required" }}
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Subject</FormLabel>
-                          <FormControl>
-                            <Input placeholder="Project inquiry" {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="message"
-                      rules={{ required: "Message is required" }}
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Message</FormLabel>
-                          <FormControl>
-                            <Textarea
-                              rows={5}
-                              placeholder="Tell us about your project or inquiry..."
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <Button
-                      type="submit"
-                      className="px-6 py-3 bg-gradient-to-r from-techblue-600 to-techpurple-600 text-white font-medium rounded-lg hover:shadow-lg transition-all duration-300"
-                    >
-                      Send Message
-                    </Button>
-                  </form>
-                </Form>
+              {/* Remove Contact Form. To keep grid layout, leave empty div for grid balance */}
+              <div className="glass rounded-2xl p-8 md:p-10 flex items-center justify-center text-center min-h-[350px]">
+                <span className="text-gray-500 text-lg">Contact form has been temporarily removed.<br /> Please reach out via email or phone.</span>
               </div>
             </div>
           </div>
@@ -222,4 +106,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
