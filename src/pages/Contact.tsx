@@ -4,7 +4,6 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import AnimatedGradient from "@/components/ui/AnimatedGradient";
 import ContactInfo from "@/components/contact/ContactInfo";
-import ContactForm from "@/components/contact/ContactForm";
 
 const Contact = () => {
   useEffect(() => {
@@ -30,15 +29,13 @@ const Contact = () => {
           </div>
         </AnimatedGradient>
 
-        {/* Contact Info & Contact Form */}
+        {/* Contact Info (centered) */}
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Contact Information */}
-              <ContactInfo />
-
-              {/* Contact Form */}
-              <ContactForm />
+            <div className="flex justify-center">
+              <div className="w-full max-w-xl">
+                <ContactInfo />
+              </div>
             </div>
           </div>
         </section>
